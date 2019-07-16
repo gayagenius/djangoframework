@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="templates/css/main.css">
+	<link rel="stylesheet" href="Assets/bootstrap/bootstrap.min.css">
+
+	<style>
+
+
+
+	body{
+		background-color:black;
+		/*background:linear-gradient(35deg,rgb(204,255,255),rgb(255,204,204));;
+		background-image:url(../media/profile_image/venue.jpg);*/
+	}
+
+	/*.container{
+		max-width:800px;
+		min-height:300px;
+		margin: 0 auto;*/
+		/*background-color:linear-gradient(35deg,rgb(204,255,355),rgb(255,204,204));;
+		border-radius: 10px;*/
+	}
+	.container h2{
+		margin: 5px;
+		color: black;
+		text-align: center;
+	}
+	.container form{
+		padding: 5px;
+		/*margin: 0px;*/
+		border-radius: 10px;
+		background-color:blue;
+		max-width:800px;
+		min-height:300px;
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+	<div class = "container">
+		<h2> Add a new student </h2>
+		<form method = "POST">{%csrf_token%}
+
+		    {{form.as_p}}
+
+
+			<button type="submit">Add</button>
+
+
+		</form>
+</div>
+</body>
+</html>
