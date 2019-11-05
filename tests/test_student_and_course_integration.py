@@ -7,7 +7,7 @@ import datetime
 class StudentCourseTestCase(TestCase):
     def setUp(self):
         self.student_a=Student.objects.create(
-            first_name="Philice",
+            first_name="Rosephillice",
             last_name="Jumba",
             date_of_birth=datetime.date(1995,12,20),
             gender="Female",
