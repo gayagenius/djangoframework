@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import CourseForm
 from .models import Course
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 
@@ -11,6 +12,10 @@ def add_course(request):
         form = CourseForm(request.POST)
         if form.is_valid():
             form.save()
+
+        else:
+             return HttpResponse("invalid data",status=400)
+
 
     else:
         form=CourseForm()

@@ -10,7 +10,7 @@ class Teacher(models.Model):
     date_employed = models.DateField()
     subject_training = models.CharField(max_length = 40)
     id_number=models.IntegerField(null=True)
-    image = models.ImageField(upload_to='profile_image',blank=True)
+    image = models.ImageField(upload_to='profile_image',blank=True,null=True)
     
     
 # Create your models here.

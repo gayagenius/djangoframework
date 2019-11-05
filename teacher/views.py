@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import TeacherForm
 from .models import Teacher
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 def add_teacher(request):
@@ -10,6 +11,8 @@ def add_teacher(request):
         form = TeacherForm(request.POST)
         if form.is_valid():
             form.save()
+        else:
+            return HttpResponse("invalid data",status=400)
 
     else:
         form=TeacherForm()

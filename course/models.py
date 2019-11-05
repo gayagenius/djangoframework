@@ -7,7 +7,7 @@ class Course(models.Model):
     start_date=models.DateField()
     end_date=models.DateField()
     course_description=models.TextField()
-    teacher=models.ForeignKey(Teacher,null=True,on_delete=models.CASCADE)
+    teacher=models.ForeignKey(Teacher,null=True,on_delete=models.CASCADE, blank=True)
 
 # Create your models here.
  
